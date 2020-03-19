@@ -4620,7 +4620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -10.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4639,8 +4639,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  ball: {fileID: 0}
-  power: 2000
+  ball1: {fileID: 5444834148435591193, guid: bb5d342d10f8d420ba415a4fa9492239, type: 3}
+  ball2: {fileID: -8944152608117541862, guid: e3efc6225d04a49bab1ab7f35769d17d, type: 3}
+  ball3: {fileID: 2902674904244220829, guid: d157afa94587646828d4c6a800ae2d66, type: 3}
+  ball4: {fileID: 5964050352396753586, guid: 0ff58bdef4f444d53a5d2b98c0cb7d39, type: 3}
+  power1: 1000
+  power2: 1500
+  power3: 2000
+  power4: 2500
+  y: 0
+  maxY: 4
 --- !u!1001 &964105539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10191,6 +10199,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 215944555}
     m_Modifications:
+    - target: {fileID: -5990884648316677108, guid: d7709b5edf6a1458988002c567b9116d,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -5990884648316677108, guid: d7709b5edf6a1458988002c567b9116d,
+        type: 3}
+      propertyPath: maxY
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 2015208496765054154, guid: d7709b5edf6a1458988002c567b9116d,
         type: 3}
       propertyPath: m_Name

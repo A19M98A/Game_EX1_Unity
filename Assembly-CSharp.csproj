@@ -63,8 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BallContoroller.cs" />
     <Compile Include="Assets\Scripts\Shooter.cs" />
     <Compile Include="Assets\Scripts\TEst.cs" />
+    <Compile Include="Assets\Scripts\WallBallContoroller.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/am.a/Documents/Unity/Game_1_AminAllah_Janipoor/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

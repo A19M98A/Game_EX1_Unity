@@ -5,8 +5,14 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     public int moveSpeed = 5;
-    public Rigidbody ball;
-    public int power = 2000;
+    public Rigidbody ball1;
+    public Rigidbody ball2;
+    public Rigidbody ball3;
+    public Rigidbody ball4;
+    public int power1 = 1000;
+    public int power2 = 1500;
+    public int power3 = 2000;
+    public int power4 = 2500;
 
     void Start()
     {
@@ -24,9 +30,28 @@ public class Shooter : MonoBehaviour
         {
             //Debug.Log("Fire1was pressed!");
 
-            Rigidbody instance = Instantiate(ball, transform.position, transform.rotation) as Rigidbody;
+            Rigidbody instance = Instantiate(ball1, transform.position, transform.rotation) as Rigidbody;
             Vector3 fwd = transform.TransformDirection(Vector3.forward);
-            instance.AddForce(fwd * power);
+            instance.AddForce(fwd * power1);
+        }
+        if (Input.GetButtonUp("Fire2"))
+        {
+            //Debug.Log("Fire1was pressed!");
+
+            Rigidbody instance = Instantiate(ball2, transform.position, transform.rotation) as Rigidbody;
+            Vector3 fwd = transform.TransformDirection(Vector3.forward);
+            instance.AddForce(fwd * power2);
+        }
+        if (Input.GetButtonUp("Fire3"))
+        {
+            //Debug.Log("Fire1was pressed!");
+            int r = Random.Range(3, 5);
+            Rigidbody randBall = ball3;
+            if (r == 4)
+                randBall = ball4;
+            Rigidbody instance = Instantiate(randBall, transform.position, transform.rotation) as Rigidbody;
+            Vector3 fwd = transform.TransformDirection(Vector3.forward);
+            instance.AddForce(fwd * power3);
         }
     }
 }
