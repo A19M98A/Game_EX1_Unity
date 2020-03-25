@@ -13,6 +13,8 @@ public class Shooter : MonoBehaviour
     public int power2 = 1500;
     public int power3 = 2000;
     public int power4 = 2500;
+    public float h;
+    public float v;
 
     void Start()
     {
@@ -22,9 +24,10 @@ public class Shooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float h = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
-        float v = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
-        transform.Translate(h, v, 0);
+        h = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
+        v = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
+        if ((transform.position.y > 1 || v > 0 || v == 0) && (transform.position.y < 12.5 || v < 0 || v == 0) && (transform.position.x < 13 || h < 0 || h == 0) && (transform.position.x > -13 || h > 0 || h == 0))
+            transform.Translate(h, v, 0);
 
         if (Input.GetButtonUp("Fire1"))
         {
