@@ -43073,6 +43073,10 @@ MonoBehaviour:
   power4: 2500
   h: 0
   v: 0
+  p: 0
+  Y: 0
+  X: 0
+  Z: 0
 --- !u!4 &963864961 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1519732065160395526, guid: afa0de1ab86834ef698cb64e59e21777,
@@ -75065,7 +75069,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 49fe5cd051d364b10b1ac864d1f20004, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

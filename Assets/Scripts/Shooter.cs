@@ -15,10 +15,18 @@ public class Shooter : MonoBehaviour
     public int power4 = 2500;
     public float h;
     public float v;
+    public float p;
+    public float Y;
+    public float X;
+    public float Z;
 
     void Start()
     {
+        Z = transform.position.z;
+        X = transform.position.x;
+        Y = transform.position.y;
 
+        transform.position = new Vector3(X, Y, -50);
     }
 
     // Update is called once per frame
@@ -29,6 +37,9 @@ public class Shooter : MonoBehaviour
         if ((transform.position.y > 1 || v > 0 || v == 0) && (transform.position.y < 12.5 || v < 0 || v == 0) && (transform.position.x < 13 || h < 0 || h == 0) && (transform.position.x > -13 || h > 0 || h == 0))
             transform.Translate(h, v, 0);
 
+        if (transform.position.z < Z)
+            transform.Translate(0, 0, (Time.deltaTime * moveSpeed));
+
         if (Input.GetButtonUp("Fire1"))
         {
             //Debug.Log("Fire1was pressed!");
@@ -37,7 +48,7 @@ public class Shooter : MonoBehaviour
             Vector3 fwd = transform.TransformDirection(Vector3.forward);
             instance.AddForce(fwd * power1);
         }
-        if (Input.GetButtonUp("Fire2"))
+        else if (Input.GetButtonUp("Fire2"))
         {
             //Debug.Log("Fire1was pressed!");
 
@@ -45,7 +56,7 @@ public class Shooter : MonoBehaviour
             Vector3 fwd = transform.TransformDirection(Vector3.forward);
             instance.AddForce(fwd * power2);
         }
-        if (Input.GetButtonUp("Fire3"))
+        else if (Input.GetButtonUp("Fire3"))
         {
             //Debug.Log("Fire1was pressed!");
             int r = Random.Range(3, 5);
